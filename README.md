@@ -111,6 +111,7 @@ Raw Point Cloud (.ply/.mat)
 
 ### Quick Start
 A demo dataset is included. Replace the file paths in "Main_Fracture_modeling.m" with the provided "2..mat" and "3.ply" paths, then run the script.
+Edit `main_workflow.m` and update the file paths at lines 8, 28, and 29 to match your local dataset (point cloud file and training data).
 
 matlab
 %% Stage 1: MCMC Bayesian inversion training
