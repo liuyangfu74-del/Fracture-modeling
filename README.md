@@ -33,7 +33,8 @@ Our methodology is validated using point cloud data collected from highsteep roc
 
 ## Results
 
-*[Insert figure showing: point cloud density map → extracted centerlines → 3D sweep models]*
+<img width="498" height="665" alt="image" src="https://github.com/user-attachments/assets/9da9e778-9b70-4440-bbdc-3c9acc6f8839" />
+
 
 ## Installation
 
