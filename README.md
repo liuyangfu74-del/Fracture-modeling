@@ -32,10 +32,9 @@ Our methodology is validated using point cloud data collected from highsteep roc
 
 
 ## Results
+<img width="705" height="271" alt="image" src="https://github.com/user-attachments/assets/f7b6aa14-eabc-4ce1-a359-7da34104e0d0" />
+
 <img width="610" height="312" alt="image" src="https://github.com/user-attachments/assets/ee498e13-a34b-4d2c-926b-5ea923ed9117" />
-
-<img width="498" height="665" alt="image" src="https://github.com/user-attachments/assets/9da9e778-9b70-4440-bbdc-3c9acc6f8839" />
-
 
 ## Installation
 
