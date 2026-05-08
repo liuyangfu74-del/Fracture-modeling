@@ -110,11 +110,11 @@ Raw Point Cloud (.ply/.mat)
 ## Usage
 
 ### Quick Start
-A demo dataset is included. Replace the file paths in "Main_Fracture_modeling.m" with the provided "2..mat" and "3.ply" paths, then run the script.
-Edit `main_workflow.m` and update the file paths at lines 8, 28, and 29 to match your local dataset (point cloud file and training data).
+A demo dataset is included. Replace the file paths in `Main_Fracture_modeling.m` with the provided `2..mat` and `3.ply` paths, then run the script.
+Edit `Main_Fracture_modeling.m` and update the file paths at lines 8, 28, and 29 to match your local dataset (point cloud file and training data).
 
-matlab
-%% Stage 1: MCMC Bayesian inversion training
+
+Stage 1: MCMC Bayesian inversion training
 [results, params_mean, post_samples] = bayesian_mcmc_inversion(...
     'data.mat', ...
     'n_chains', 4, ...
@@ -124,13 +124,13 @@ matlab
     'scale_factor', 10, ...
     'use_parallel', true);
 
-%% Stage 2: Point cloud feature extraction
+Stage 2: Point cloud feature extraction
 ptCloud = pcread('pointcloud.ply');
 [density_map, ~] = PCdensity_test(ptCloud, searchrange, datadensity);
 [FractureProperties, Fractioninformations] = extractMaxValueLine2(...
     ptCloud.Location, density_map, 0.2, 50, referencePoints);
 
-%% Stage 3: Sweepbased 3D modeling
+Stage 3: Sweepbased 3D modeling
 for conf_idx = 1:7
     predict_func = results.predict_funcs_by_quantile{conf_idx};
     L_predicted = predict_func(apertures);
@@ -138,7 +138,7 @@ for conf_idx = 1:7
         centerline, seg_idx, apertures, L_predicted, normal_vector, 20);
 end
 
-%% Stage 4: Visualization
+Stage 4: Visualization
 visualize_sweep_loft(centerline, V, F, upper_surface, lower_surface);
 
 
